@@ -1,0 +1,7 @@
+/* header css */
+.header{display:flex;align-items:center;gap:20px}
+.header h1{margin:0;color:#fff;padding-left:8px;font-size:28px}
+.actions{margin-left:auto}
+.btn{border:none;padding:10px 16px;border-radius:20px;cursor:pointer}
+.btn.new{background:linear-gradient(90deg,#5fe0ff,#c86bff);color:#fff}
+.btn.notify{background:#fff;color:#333;margin-left:8px}

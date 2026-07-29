@@ -1,0 +1,5 @@
+/* sidebar component css */
+.brand{font-weight:800;font-size:18px;margin-bottom:18px}
+nav a{display:block;padding:12px 8px;border-radius:8px;margin:6px 0;color:#fff;text-decoration:none;background:transparent}
+nav a.active{background:rgba(255,255,255,0.12)}
+nav a.exit{margin-top:30px;font-weight:700}
