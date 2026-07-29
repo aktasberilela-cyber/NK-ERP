@@ -1,17 +1,13 @@
-# Backend — öneri ve başlangıç
+# Fullstack MVP branch
 
-Önerilen teknoloji yığını (başlangıç için):
-- Node.js + Express
-- PostgreSQL (veri kalıcılığı için)
-- Sequelize veya TypeORM (ORM için)
-- JWT tabanlı authentication
-- Docker + docker-compose (geliştirme ve dağıtım için)
+Bu branch, temel bir fullstack MVP uygulaması içerir:
+- Backend: Express + Sequelize + Postgres (auth, products, orders, messages)
+- Frontend: React (Vite) temel sayfalar ve API bağlantısı
+- Docker Compose: db, backend, frontend
 
-Başlangıç adımları (özet):
-1. backend klasöründe node init:
-   npm init -y
-2. Gerekli paketleri kurun:
-   npm i express pg sequelize dotenv
-3. Docker kullanacaksanız postgres servisi ekleyin.
+Kullanım (Docker ile önerilir):
+1. docker-compose up --build
+2. Backend: http://localhost:4000/api/health
+3. Frontend: http://localhost:3000
 
-Bu repoda şimdilik sadece frontend prototip eklendi. Backend kodlamasına bir sonraki adımda API modelleri, kullanıcı yönetimi ve yetkilendirme ile başlayacağım.
+Not: JWT_SECRET ve DATABASE_URL'ı üretim için güvenli şekilde değiştirin.
