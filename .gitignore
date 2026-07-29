@@ -1,0 +1,10 @@
+.env
+node_modules/
+dist/
+.vscode/
+.DS_Store
+npm-debug.log
+coverage/
+
+# front-end build
+frontend/dist/

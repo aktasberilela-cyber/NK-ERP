@@ -1,0 +1,50 @@
+/* styles for NK ERP prototype */
+:root{
+  --purple:#6f2b8e;
+  --gold:#f4c542;
+  --card:#e9e9e9;
+  --muted:#bdbdbd;
+}
+*{box-sizing:border-box;font-family: 'Segoe UI', Roboto, Arial, sans-serif}
+html,body,#root{height:100%}
+body{margin:0;background:linear-gradient(180deg,var(--purple),#ab3e99 40%,var(--gold) 100%);}
+.app{display:flex;min-height:100vh}
+.sidebar{width:170px;background:rgba(89,24,101,0.98);color:#fff;padding:28px;border-radius:12px 0 0 12px;margin:20px;height:calc(100vh - 40px)}
+.sidebar-brand{font-weight:800;font-size:18px;margin-bottom:18px}
+.sidebar nav a{display:block;padding:12px 8px;border-radius:8px;margin:6px 0;color:#fff;text-decoration:none;background:transparent}
+.sidebar nav a.active{background:rgba(255,255,255,0.12);backdrop-filter: blur(2px)}
+.sidebar nav a.exit{margin-top:30px;font-weight:700}
+
+.main{flex:1;padding:28px}
+.main-header{display:flex;align-items:center;gap:20px}
+.main-header h1{margin:0;color:#fff;padding-left:8px;font-size:28px}
+.btn{border:none;padding:10px 16px;border-radius:20px;cursor:pointer}
+.btn.new{background:linear-gradient(90deg,#5fe0ff,#c86bff);color:#fff}
+.btn.notify{background:#fff;color:#333;margin-left:auto}
+
+.panels{display:flex;gap:20px;margin-top:20px}
+.panel{background:var(--card);padding:18px;border-radius:18px;flex:1;min-height:170px}
+.panel.messages{flex:1}
+.panel.notifications{flex:1}
+.field{background:#f4f4f6;padding:12px;border-radius:14px;margin-bottom:12px;color:#333}
+.field.msg{height:110px}
+
+.history{margin-top:26px}
+.history-card{background:rgba(82,36,106,0.95);padding:22px;border-radius:18px;color:#fff}
+.history-card .tab{background:#fff;color:#333;display:inline-block;padding:8px 18px;border-radius:22px;margin-bottom:12px}
+.history-card .item{background:var(--card);color:#222;padding:20px;border-radius:16px;margin-top:12px}
+
+.dashboard-preview{display:flex;gap:20px;margin-top:28px}
+.dash-left{flex:1}
+.chart-placeholder{background:#fff;padding:20px;border-radius:12px;min-height:180px}
+.dash-right{width:220px;display:flex;flex-direction:column;gap:12px}
+.stat{background:rgba(255,255,255,0.9);padding:16px;border-radius:12px;text-align:center}
+
+@media(max-width:880px){
+  .app{flex-direction:column}
+  .sidebar{width:100%;height:auto;border-radius:0 0 12px 12px;margin:0}
+  .main{padding:16px}
+  .dashboard-preview{flex-direction:column}
+  .dash-right{width:100%;flex-direction:row;flex-wrap:wrap}
+  .stat{flex:1}
+}
