@@ -1,17 +1,14 @@
-# Backend — öneri ve başlangıç
+Backend scaffold for NK-ERP
 
-Önerilen teknoloji yığını (başlangıç için):
-- Node.js + Express
-- PostgreSQL (veri kalıcılığı için)
-- Sequelize veya TypeORM (ORM için)
-- JWT tabanlı authentication
-- Docker + docker-compose (geliştirme ve dağıtım için)
+This branch contains a minimal Express server with:
+- /api/auth routes (register/login)
+- Sequelize setup for Postgres
+- Dockerfile and docker-compose for local development
 
-Başlangıç adımları (özet):
-1. backend klasöründe node init:
-   npm init -y
-2. Gerekli paketleri kurun:
-   npm i express pg sequelize dotenv
-3. Docker kullanacaksanız postgres servisi ekleyin.
+To run locally without docker:
+1. cd backend
+2. npm install
+3. set DATABASE_URL env (or copy ../backend/.env.example)
+4. node src/index.js
 
-Bu repoda şimdilik sadece frontend prototip eklendi. Backend kodlamasına bir sonraki adımda API modelleri, kullanıcı yönetimi ve yetkilendirme ile başlayacağım.
+WARNING: This scaffold is a minimal prototype. Do not use in production without security hardening.
